@@ -4,6 +4,12 @@
 
 </div>
 
+> [!NOTE]
+> Progress: [########################################>-------------------] 65/96 (67.7 %)
+
+> [!CAUTION]
+> Testing of exercises/quiz3.rs failed!
+
 Greetings and welcome to `rustlings`. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
 
 _...looking for the old, web-based version of Rustlings? Try [here](https://github.com/rust-lang/rustlings/tree/rustlings-1)_
