@@ -5,7 +5,7 @@
 </div>
 
 > [!NOTE]
-> Progress: [########################################>-------------------] 65/96 (67.7 %)
+> Progress: ![](https://geps.dev/progress/68) 65/96 (67.7 %)
 
 > [!CAUTION]
 > Testing of exercises/quiz3.rs failed!
