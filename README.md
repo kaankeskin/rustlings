@@ -5,7 +5,7 @@
 </div>
 
 > [!NOTE]
-> Progress: ![](https://geps.dev/progress/80) 78/96 (81.2 %)
+> Progress: ![](https://geps.dev/progress/81) 78/96 (81.2 %)
 
 > [!CAUTION]
 > Testing of exercises/smart_pointers/box1.rs failed!
