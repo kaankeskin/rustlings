@@ -5,10 +5,10 @@
 </div>
 
 > [!NOTE]
-> Progress: ![](https://geps.dev/progress/80) 77/96 (80.2 %)
+> Progress: ![](https://geps.dev/progress/80) 78/96 (81.2 %)
 
 > [!CAUTION]
-> Testing of exercises/iterators/iterators5.rs failed!
+> Testing of exercises/smart_pointers/box1.rs failed!
 
 Greetings and welcome to `rustlings`. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
 
