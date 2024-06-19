@@ -1,0 +1,1 @@
+Map<std::slice::Iter<'_, i16>, fn(&i16) -> Result<u8, <&i16 as std::convert::TryInto<u8>>::Error> {<&i16 as std::convert::TryInto<u8>>::try_into}>

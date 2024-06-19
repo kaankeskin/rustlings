@@ -27,8 +27,6 @@ enum IntoColorError {
     IntConversion,
 }
 
-// I AM NOT DONE
-
 // Your task is to complete this implementation and return an Ok result of inner
 // type Color. You need to create an implementation for a tuple of three
 // integers, an array of three integers, and a slice of integers.
@@ -41,6 +39,20 @@ enum IntoColorError {
 impl TryFrom<(i16, i16, i16)> for Color {
     type Error = IntoColorError;
     fn try_from(tuple: (i16, i16, i16)) -> Result<Self, Self::Error> {
+        let any_conversion_err = [tuple.0, tuple.1, tuple.2]
+            .into_iter()
+            .map(TryInto::<u8>::try_into)
+            .any(|v| v.is_err());
+
+        if any_conversion_err {
+            return Err(IntoColorError::IntConversion)
+        }
+
+        Ok(Color {
+            red: tuple.0.try_into().unwrap(),
+            green: tuple.1.try_into().unwrap(),
+            blue: tuple.2.try_into().unwrap()
+        })
     }
 }
 
@@ -48,6 +60,20 @@ impl TryFrom<(i16, i16, i16)> for Color {
 impl TryFrom<[i16; 3]> for Color {
     type Error = IntoColorError;
     fn try_from(arr: [i16; 3]) -> Result<Self, Self::Error> {
+        let any_conversion_err = arr
+            .into_iter()
+            .map(TryInto::<u8>::try_into)
+            .any(|v| v.is_err());
+
+        if any_conversion_err {
+            return Err(IntoColorError::IntConversion)
+        }
+
+        Ok(Color {
+            red: arr[0].try_into().unwrap(),
+            green: arr[1].try_into().unwrap(),
+            blue: arr[2].try_into().unwrap()
+        })
     }
 }
 
@@ -55,6 +81,25 @@ impl TryFrom<[i16; 3]> for Color {
 impl TryFrom<&[i16]> for Color {
     type Error = IntoColorError;
     fn try_from(slice: &[i16]) -> Result<Self, Self::Error> {
+        if slice.len() != 3 {
+            return  Err(IntoColorError::BadLen);
+        }
+
+        let any_conversion_err = slice
+            .into_iter()
+            .copied()
+            .map(TryInto::<u8>::try_into)
+            .any(|v| v.is_err());
+
+        if any_conversion_err {
+            return Err(IntoColorError::IntConversion);
+        }
+
+        Ok(Color {
+            red: slice[0].try_into().unwrap(),
+            green: slice[1].try_into().unwrap(),
+            blue: slice[2].try_into().unwrap()
+        })
     }
 }
 

@@ -5,10 +5,11 @@
 </div>
 
 > [!NOTE]
-> Progress: ![](https://geps.dev/progress/96) 92/96 (95.8 %)
+> Progress: ![](https://geps.dev/progress/100) 96/96 (100 %)
 
-> [!CAUTION]
-> Testing of exercises/conversions/from_into.rs failed!
+> [!TIP]
+> 🎉 All exercises completed! 🎉
+> I made it to the Fe-nish line!
 
 Greetings and welcome to `rustlings`. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
 
